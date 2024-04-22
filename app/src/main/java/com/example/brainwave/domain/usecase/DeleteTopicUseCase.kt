@@ -1,0 +1,8 @@
+package com.example.brainwave.domain.usecase
+
+import com.example.brainwave.data.model.APIResponseItem
+import com.example.brainwave.domain.repository.TopicsRepository
+
+class DeleteTopicUseCase(private val topicsRepository: TopicsRepository){
+    suspend fun execute(apiResponseItem: APIResponseItem) = topicsRepository.deleteTopic(apiResponseItem)
+}
